@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './index.module.css'
 
-const Link = ({ title, href }) => {
+const Link = ({ title, href, type }) => {
     return (
-        <li className={style['list-item']}>
-            <a href={href} className={style['header-link']}>
+        <li className={style[`${type}-list-item`]}>
+            <a href={href} className={style[`${type}-link`]}>
                 {title}
             </a>
         </li>
