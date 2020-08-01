@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './index.module.css'
-import image from '../../images/blue-origami-bird-flipped.png'
+import image from '../../images/blue-origami-bird.png'
 
 const Origami = ({ description, author }) => {
     return (
