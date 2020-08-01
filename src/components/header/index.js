@@ -1,11 +1,13 @@
 import React from 'react'
 import style from './index.module.css'
 import Link from '../link'
+import logo from '../../images/white-origami-bird.png'
 
 const Header = () => {
     return (
         <header className={style.navigation}>
             <ul>
+                <img src={logo} alt="" className={style.logo}/>
                 <Link href="#" title="Going to 1" type='header'/>
                 <Link href="#" title="Going to 2" type='header'/>
                 <Link href="#" title="Going to 3" type='header'/>
