@@ -3,11 +3,11 @@ import style from './index.module.css'
 
 const Link = ({ title, href, type }) => {
     return (
-        <li className={style[`${type}-list-item`]}>
+        <div className={style[`${type}-list-item`]}>
             <a href={href} className={style[`${type}-link`]}>
                 {title}
             </a>
-        </li>
+        </div>
     )
 }
 
