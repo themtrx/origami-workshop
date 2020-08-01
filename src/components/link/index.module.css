@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 
-.header-list-item, footer .listItem {
+.header-list-item, .footer-list-item {
     display: inline-block;
     height: auto;
     margin-right: 2%;
@@ -20,7 +20,7 @@
     border-top: 2px solid #ffa000;
 }
 
-footer .listItem:nth-child(1) {
+.footer-list-item:nth-child(1) {
     margin-left: 1%;
 }
 
@@ -28,7 +28,7 @@ footer .listItem:nth-child(1) {
     padding: 2%;
 } */
 
-footer .listItem:not(:last-child) {
+.footer-list-item:not(:last-child) {
     padding: 2%;
     margin-top: 1.5%;
     border-bottom: 2px solid #234465;
@@ -40,7 +40,7 @@ footer .listItem:not(:last-child) {
     font-weight: bold;
 }
 
-footer .listItem:hover {
+.footer-list-item:hover {
     border-bottom: none;
     border-top: 2px solid #234465;
     font-weight: bold;
