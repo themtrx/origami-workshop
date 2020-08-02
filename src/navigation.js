@@ -7,6 +7,8 @@ import {
 
 import PublicationsPage from './pages/publications'
 import ShareToughts from './pages/shareThoughts'
+import RegisterPage from './pages/register'
+import LoginPage from './pages/login'
 
 const Navigation = () => {
 
@@ -15,6 +17,8 @@ const Navigation = () => {
             <Switch>
                 <Route path='/' exact component={PublicationsPage}/>
                 <Route path='/share' component={ShareToughts}/>
+                <Route path='/register' component={RegisterPage}/>
+                <Route path='/login' component={LoginPage}/>
             </Switch>
         </BrowserRouter>
     )

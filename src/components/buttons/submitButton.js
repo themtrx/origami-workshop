@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './index.module.css'
 
-const SubmitButton = ({name}) => {
+const SubmitButton = ({name, type}) => {
     return (
-        <button className={style.submitButton}>{name}</button>
+        <button type={type} className={style.submitButton}>{name}</button>
     )
 }
 
