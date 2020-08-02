@@ -1,14 +1,16 @@
-import React from 'react';
-import style from'./index.module.css';
+import React from 'react'
+import style from './index.module.css'
 import Wrapper from '../wrapper'
-import Main from '../../components/main'
+import Title from '../../components/title'
+import Posts from '../../components/posts'
 
-function PublicationsPage() {
-  return (
-    <Wrapper>
-        <Main />
-    </Wrapper>
-  );
+const PublicationsPage = () => {
+      return (
+        <Wrapper>
+            <Title title='Publications'/>
+            <Posts />
+        </Wrapper>
+      )
 }
 
-export default PublicationsPage;
+export default PublicationsPage

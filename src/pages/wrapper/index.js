@@ -10,7 +10,9 @@ function Wrapper(props) {
       <Header />
       <div className={style.container}>
         <Aside />
-        {props.children}
+          <div className={style['publication-container']}>
+            {props.children}
+          </div>
       </div>
         <Footer />
     </div>
