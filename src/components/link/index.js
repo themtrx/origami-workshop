@@ -1,14 +1,15 @@
 import React from 'react'
 import style from './index.module.css'
+import { Link } from 'react-router-dom' 
 
-const Link = ({ title, href, type }) => {
+const pageLinks = ({ title, href, type }) => {
     return (
         <div className={style[`${type}-list-item`]}>
-            <a href={href} className={style[`${type}-link`]}>
+            <Link to={href} className={style[`${type}-link`]}>
                 {title}
-            </a>
+            </Link>
         </div>
     )
 }
 
-export default Link
+export default pageLinks
