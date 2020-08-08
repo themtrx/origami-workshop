@@ -10,7 +10,7 @@ class LoginPage extends Component {
         super(props)
 
         this.state = {
-            email: '',
+            username: '',
             password: '',
         }
     }
@@ -22,22 +22,55 @@ class LoginPage extends Component {
         this.setState(newState)
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+
+        const {
+            username,
+            password
+        } = this.state
+
+        fetch('http://localhost:9999/api/user/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                username,
+                password
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then((res) => 
+                Promise.all([
+                    res.json(),
+                    res.headers.get('Authorization')
+                ])
+            )
+            .then(([currentUser, auth]) => {
+
+                if(currentUser && auth){
+                    document.cookie = `x-auth-token=${auth}`
+                    this.props.history.push('/')
+                }
+            })
+            .catch((err) => console.log(err))
+    }
+
     render () {
         const {
-            email,
+            username,
             password,
         } = this.state
 
         return (
             <Wrapper>
-                <div className={style['login-form']}>
+                <form className={style['login-form']} onSubmit={this.handleSubmit}>
                     <Title title='Login Page'/>
                     <Input
-                        label='Email'
+                        label='Username'
                         type='text'
-                        name='email'
-                        value={email}
-                        onChange={(e)=> this.onChange(e, 'email')}
+                        name='username'
+                        value={username}
+                        onChange={(e)=> this.onChange(e, 'username')}
                     />
                     <Input
                         label='Password'
@@ -47,7 +80,7 @@ class LoginPage extends Component {
                         onChange={(e)=> this.onChange(e, 'password')}
                     />
                     <SubmitButton type='submit' name='Login'/>
-                </div>
+                </form>
             </Wrapper>
         )
     }
