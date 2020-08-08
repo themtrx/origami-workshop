@@ -9,6 +9,7 @@ import PublicationsPage from './pages/publications'
 import ShareToughts from './pages/shareThoughts'
 import RegisterPage from './pages/register'
 import LoginPage from './pages/login'
+import ProfilePage from './pages/profile'
 
 const Navigation = () => {
 
@@ -19,6 +20,7 @@ const Navigation = () => {
                 <Route path='/share' component={ShareToughts}/>
                 <Route path='/register' component={RegisterPage}/>
                 <Route path='/login' component={LoginPage}/>
+                <Route path='/profile/:userid' component={ProfilePage}/>
             </Switch>
         </BrowserRouter>
     )
