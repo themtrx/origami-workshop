@@ -31,7 +31,7 @@ class LoginPage extends Component {
         return (
             <Wrapper>
                 <div className={style['login-form']}>
-                    <Title title='Register Page'/>
+                    <Title title='Login Page'/>
                     <Input
                         label='Email'
                         type='text'
@@ -46,7 +46,7 @@ class LoginPage extends Component {
                         value={password}
                         onChange={(e)=> this.onChange(e, 'password')}
                     />
-                    <SubmitButton type='submit' name='Register'/>
+                    <SubmitButton type='submit' name='Login'/>
                 </div>
             </Wrapper>
         )
